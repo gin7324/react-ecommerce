@@ -34,7 +34,7 @@ const Cart = () => {
                     {cart.map(item => (
                         <tr key={item.id}>
                             <td>{item.name}</td>
-                            <td>${item.price}</td>
+                            <td>₱{item.price}</td>
                             <td>
                                 <button
                                     className="btn btn-sm btn-outline-secondary me-1"
@@ -50,7 +50,7 @@ const Cart = () => {
                                     +
                                 </button>
                             </td>
-                            <td>${(item.price * item.qty).toFixed(2)}</td>
+                            <td>₱{(item.price * item.qty).toFixed(2)}</td>
                             <td>
                                 <button
                                     className="btn btn-sm btn-danger"
@@ -63,7 +63,7 @@ const Cart = () => {
                     ))}
                 </tbody>
             </table>
-            <h3 className="text-end">Total: ${total.toFixed(2)}</h3>
+            <h3 className="text-end">Total: ₱{total.toFixed(2)}</h3>
             <div className="text-end">
                 <Link to="/checkout" className="btn btn-primary">
                     Proceed to Checkout

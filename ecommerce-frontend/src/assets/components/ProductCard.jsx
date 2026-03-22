@@ -34,10 +34,10 @@ const ProductCard = memo(({ product }) => {
 
                 <div className="mb-2">
                     <span className="text-muted text-decoration-line-through me-2">
-                        ${product.oldPrice}
+                        ₱{product.oldPrice}
                     </span>
                     <span className="fw-bold text-danger">
-                        ${product.price}
+                        ₱{product.price}
                     </span>
                 </div>
 
