@@ -280,6 +280,15 @@ button:hover::before {
   padding: 2rem 1rem;
   position: relative;
   overflow: hidden;
+  animation: colorShift 8s ease-in-out infinite;
+}
+
+@keyframes colorShift {
+  0% { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+  25% { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+  50% { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+  75% { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+  100% { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
 }
 
 .modern-header::before {
