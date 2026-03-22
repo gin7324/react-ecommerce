@@ -24,16 +24,9 @@ const Home = () => {
                 return res.json();
             })
             .then((data) => {
-                const formatted = data.slice(0, 4).map(item => ({
-                    id: item.id,
-                    name: item.title,
-                    oldPrice: (item.price * 1.2).toFixed(2),
-                    price: item.price,
-                    discount: Math.round((item.price * 0.2) / item.price * 100),
-                    rating: Math.round(item.rating?.rate || 0),
-                    image: item.image
-                }));
-                setProducts(formatted);
+                console.log("Home API Response:", data);
+                // Custom backend already returns data in correct format, just take first 4
+                setProducts(data.slice(0, 4));
             })
             .catch((err) => {
                 console.error('Error fetching products in Home:', err);
