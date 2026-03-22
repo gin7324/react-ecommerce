@@ -2,8 +2,8 @@
 import ProductCard from "../components/ProductCard";
 import RecentlyViewed from "../components/RecentlyViewed";
 import BannerImg from "../assets/images/Desktop.jpg";
-import MonitorImg from "../assets/images/4k monitor.jpg";
-import KeyboardImg from "../assets/images/mechkey.jpg";
+import SecondImg from "../assets/images/Jackets.jpg";
+import ThirdImg from "../assets/images/rings.jpg";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -95,17 +95,17 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="carousel-item">
-                                <img src={MonitorImg} className="d-block w-100" alt="4K Monitors" />
+                                <img src={SecondImg} className="d-block w-100" alt="Jackets" />
                                 <div className="carousel-caption">
-                                    <h3>4K Ultra HD Monitors</h3>
-                                    <p>Crystal clear display for work and gaming</p>
+                                    <h3>Jackets</h3>
+                                    <p>Stylish and comfortable jackets for all seasons</p>
                                 </div>
                             </div>
                             <div className="carousel-item">
-                                <img src={KeyboardImg} className="d-block w-100" alt="Mechanical Keyboards" />
+                                <img src={ThirdImg} className="d-block w-100" alt="rings" />
                                 <div className="carousel-caption">
-                                    <h3>Mechanical Keyboards</h3>
-                                    <p>Premium typing experience</p>
+                                    <h3>Rings and Accessories</h3>
+                                    <p>Elegant and unique rings and accessories for every occasion </p>
                                 </div>
                             </div>
                         </div>
