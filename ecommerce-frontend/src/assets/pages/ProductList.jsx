@@ -52,7 +52,7 @@ const ProductList = () => {
     
     //fetch products when component loads
     useEffect(() => {
-        fetch("https://fakestoreapi.com/products")
+        fetch("https://react-ecommerce-9s1v.onrender.com/api/products")
             .then(res => {
                 if (!res.ok) {
                     throw new Error(`HTTP error! status: ${res.status}`);
@@ -60,29 +60,11 @@ const ProductList = () => {
                 return res.json();
             })
             .then(data => {
-                // Map API data to product model
-                const formatted = data.map(product => {
-                    // Generate consistent rating and discount based on product ID
-                    const rating = (product.id % 5) + 1; // 1-5 stars
-                    const discount = ((product.id % 3) + 1) * 10; // 10, 20, or 30%
-                    const discountedPrice = Math.round(product.price * (1 - discount / 100) * 100) / 100;
-                    
-                    return {
-                        id: product.id,
-                        name: product.title,
-                        price: discountedPrice,
-                        oldPrice: Math.round(product.price * 100) / 100,
-                        rating: rating,
-                        discount: discount,
-                        image: product.image,
-                        category: product.category
-                    };
-                });
-                setApiProducts(formatted);
+                setApiProducts(data);
                 setLoading(false);
             })
             .catch(err => {
-                console.error("Error fetching from FakeStore API:", err);
+                console.error("Error fetching from backend API:", err);
                 console.log("Falling back to default products");
                 setApiProducts(defaultProducts);
                 setLoading(false);

@@ -13,16 +13,16 @@ const Home = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch("https://fakestoreapi.com/products")
+        fetch("https://react-ecommerce-9s1v.onrender.com/api/products")
             .then((res) => res.json())
             .then((data) => {
                 const formatted = data.slice(0, 4).map(item => ({
                     id: item.id,
-                    name: item.title,
-                    oldPrice: item.price * 1.25,
+                    name: item.name,
+                    oldPrice: item.oldPrice,
                     price: item.price,
-                    discount: 20,
-                    rating: Math.round(item.rating.rate),
+                    discount: item.discount,
+                    rating: item.rating,
                     image: item.image
                 }));
                 setProducts(formatted);

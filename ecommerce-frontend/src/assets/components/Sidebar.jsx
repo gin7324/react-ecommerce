@@ -6,7 +6,7 @@ const Sidebar = () => {
 
     useEffect(() => {
         // Fetch categories from backend API
-        fetch('http://localhost:5000/api/categories')
+        fetch('https://react-ecommerce-9s1v.onrender.com/api/categories')
             .then(res => res.json())
             .then(data => {
                 setCategories(data);
