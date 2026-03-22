@@ -4,16 +4,22 @@ const Sidebar = () => {
     const [categories, setCategories] = useState([]);
     const [loading, setLoading] = useState(true);
 
+    const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
     useEffect(() => {
         // Fetch categories from backend API
-        fetch('https://react-ecommerce-api.onrender.com/api/categories')
-            .then(res => res.json())
+        fetch(`${API_BASE_URL}/api/categories`)
+            .then(res => {
+                if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+                return res.json();
+            })
             .then(data => {
                 setCategories(data);
                 setLoading(false);
             })
             .catch(err => {
                 console.error('Error fetching categories:', err);
+                setCategories([]);
                 setLoading(false);
             });
     }, []);

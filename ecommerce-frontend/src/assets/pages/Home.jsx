@@ -9,12 +9,17 @@ import { Link } from "react-router-dom";
 
 
 
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
 const Home = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch("https://react-ecommerce-api.onrender.com/api/products")
-            .then((res) => res.json())
+        fetch(`${API_BASE_URL}/api/products`)
+            .then((res) => {
+                if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+                return res.json();
+            })
             .then((data) => {
                 const formatted = data.slice(0, 4).map(item => ({
                     id: item.id,
@@ -26,6 +31,10 @@ const Home = () => {
                     image: item.image
                 }));
                 setProducts(formatted);
+            })
+            .catch((err) => {
+                console.error('Error fetching products in Home:', err);
+                setProducts([]);
             });
     }, []);
 

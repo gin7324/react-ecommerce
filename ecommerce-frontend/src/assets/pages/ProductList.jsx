@@ -46,13 +46,15 @@ const defaultProducts = [
     }
 ];
 
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
 const ProductList = () => {
     const [apiProducts, setApiProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     
     //fetch products when component loads
     useEffect(() => {
-        fetch("https://react-ecommerce-api.onrender.com/api/products")
+        fetch(`${API_BASE_URL}/api/products`)
             .then(res => {
                 if (!res.ok) {
                     throw new Error(`HTTP error! status: ${res.status}`);
