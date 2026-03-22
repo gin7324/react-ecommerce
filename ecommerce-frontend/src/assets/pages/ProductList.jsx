@@ -52,7 +52,7 @@ const defaultProducts = [
     }
 ];
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || "https://react-ecommerce-1-vu7x.onrender.com";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "https://dummyjson.com";
 
 const ProductList = () => {
     const [apiProducts, setApiProducts] = useState([]);
@@ -66,9 +66,9 @@ const ProductList = () => {
     const [maxPrice, setMaxPrice] = useState("");
     const [sortBy, setSortBy] = useState("");
     
-    //fetch products when component loads
+    //fetch electronics products when component loads (DummyJSON)
     useEffect(() => {
-        const url = `${API_BASE_URL}/products`;
+        const url = `${API_BASE_URL}/products/category/electronics`;
         console.log("ProductList fetching", url);
         fetch(url)
             .then(res => {
@@ -79,15 +79,15 @@ const ProductList = () => {
             })
             .then(data => {
                 console.log("API Response:", data);
-                // Transform fakestoreapi data to match our component expectations
-                const transformedData = data.map(item => ({
+                // Transform DummyJSON data to match our component expectations
+                const transformedData = (data.products || []).map(item => ({
                     id: item.id,
                     name: item.title,
                     price: item.price,
                     oldPrice: (item.price * 1.2).toFixed(2),
-                    rating: Math.round(item.rating?.rate || 0),
-                    discount: Math.round((item.price * 0.2) / item.price * 100),
-                    image: item.image,
+                    rating: Math.round(item.rating || 0),
+                    discount: Math.round(20),
+                    image: item.thumbnail || item.images?.[0] || "",
                     category: item.category
                 }));
                 setApiProducts(transformedData);
@@ -101,10 +101,13 @@ const ProductList = () => {
             });
     }, []);
 
-    // Fetch categories
+    // Fetch categories from DummyJSON
     useEffect(() => {
-        fetch(`${API_BASE_URL}/api/categories`)
-            .then(res => res.json())
+        fetch(`${API_BASE_URL}/products/categories`)
+            .then(res => {
+                if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+                return res.json();
+            })
             .then(data => setCategories(data))
             .catch(err => console.error("Error fetching categories:", err));
     }, []);
