@@ -13,41 +13,51 @@ const ProductCard = memo(({ product }) => {
     }, [product.id, addToRecentlyViewed]); // Only depend on product.id to prevent unnecessary re-renders
 
     return (
-        <div className="card h-100 shadow-sm">
-            <div className="product-img-wrapper">
-                {product.discount && (
-                    <div className="sale-badge">-{product.discount}%</div>
-                )}
-                <img src={product.image} className="card-img-top product-img" alt={product.name} />
-            </div>
-
-            <div className="card-body d-flex flex-column">
-                <h6 className="card-title">{product.name}</h6>
-                <div className="star-rating">
-                    {[...Array(5)].map((star, index) => (
-                        <i
-                            key={index}
-                            className={`fa-star ${index < product.rating ? 'fas' : 'far'}`}
-                        ></i>
-                    ))}
+        <div className="product-card-wrapper">
+            <div className="product-card h-100">
+                <div className="product-img-container">
+                    {product.discount && (
+                        <div className="discount-badge">
+                            <span className="discount-text">-{product.discount}%</span>
+                        </div>
+                    )}
+                    <div className="wishlist-icon">
+                        <i className="far fa-heart"></i>
+                    </div>
+                    <img src={product.image} className="product-image" alt={product.name} />
+                    <div className="product-overlay">
+                        <button
+                            className="btn btn-add-cart"
+                            onClick={() => addToCart(product)}
+                        >
+                            <i className="fas fa-shopping-cart me-2"></i>
+                            Add to Cart
+                        </button>
+                    </div>
                 </div>
 
-                <div className="mb-2">
-                    <span className="text-muted text-decoration-line-through me-2">
-                        ₱{product.oldPrice}
-                    </span>
-                    <span className="fw-bold text-danger">
-                        ₱{product.price}
-                    </span>
-                </div>
+                <div className="product-info">
+                    <h6 className="product-title">{product.name}</h6>
 
-                <button
-                    className="btn btn-primary mt-auto"
-                    onClick={() => addToCart(product)}
-                >
-                    <i className="fas fa-shopping-cart me-2"></i>
-                    Add to Cart
-                </button>
+                    <div className="rating-section">
+                        <div className="stars">
+                            {[...Array(5)].map((star, index) => (
+                                <i
+                                    key={index}
+                                    className={`fa-star ${index < product.rating ? 'fas' : 'far'}`}
+                                ></i>
+                            ))}
+                        </div>
+                        <span className="rating-text">({product.rating})</span>
+                    </div>
+
+                    <div className="price-section">
+                        <span className="current-price">₱{product.price}</span>
+                        {product.oldPrice && (
+                            <span className="old-price">₱{product.oldPrice}</span>
+                        )}
+                    </div>
+                </div>
             </div>
         </div>
     );
