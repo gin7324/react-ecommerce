@@ -52,7 +52,7 @@ const ProductList = () => {
     
     //fetch products when component loads
     useEffect(() => {
-        fetch("https://react-ecommerce-9s1v.onrender.com/api/products")
+        fetch("https://react-ecommerce-api.onrender.com/api/products")
             .then(res => {
                 if (!res.ok) {
                     throw new Error(`HTTP error! status: ${res.status}`);

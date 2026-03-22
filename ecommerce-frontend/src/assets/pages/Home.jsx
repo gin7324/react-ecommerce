@@ -13,7 +13,7 @@ const Home = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch("https://react-ecommerce-9s1v.onrender.com/api/products")
+        fetch("https://react-ecommerce-api.onrender.com/api/products")
             .then((res) => res.json())
             .then((data) => {
                 const formatted = data.slice(0, 4).map(item => ({
