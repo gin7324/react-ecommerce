@@ -15,7 +15,7 @@ const Home = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        const url = `${API_BASE_URL}/products`;
+        const url = `${API_BASE_URL}/api/products`;
         console.log("Home fetching", url);
         fetch(url)
             .then((res) => {

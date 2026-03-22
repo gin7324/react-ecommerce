@@ -54,7 +54,7 @@ const ProductList = () => {
     
     //fetch products when component loads
     useEffect(() => {
-        const url = `${API_BASE_URL}/products`;
+        const url = `https://react-ecommerce-1-vu7x.onrender.com/api/products`;
         console.log("ProductList fetching", url);
         fetch(url)
             .then(res => {

@@ -7,8 +7,8 @@ const Sidebar = () => {
     const API_BASE_URL = import.meta.env.VITE_API_URL || "https://fakestoreapi.com";
 
     useEffect(() => {
-        // Fetch categories from Fake Store API
-        fetch(`${API_BASE_URL}/products/categories`)
+        // Fetch categories from backend API
+        fetch(`${API_BASE_URL}/api/categories`)
             .then(res => {
                 if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
                 return res.json();
