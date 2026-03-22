@@ -1,7 +1,7 @@
 
 import ProductCard from "../components/ProductCard";
 import RecentlyViewed from "../components/RecentlyViewed";
-import BannerImg from "../assets/images/Banner.jpg";
+import BannerImg from "../assets/images/Desktop.jpg";
 import MonitorImg from "../assets/images/4k monitor.jpg";
 import KeyboardImg from "../assets/images/mechkey.jpg";
 import { useEffect, useState } from "react";
