@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect, useCallback } from 'react';
 
 const RecentlyViewedContext = createContext();
 
@@ -24,18 +24,22 @@ export const RecentlyViewedProvider = ({ children }) => {
         localStorage.setItem('recentlyViewed', JSON.stringify(recentlyViewed));
     }, [recentlyViewed]);
 
-    const addToRecentlyViewed = (product) => {
+    const addToRecentlyViewed = useCallback((product) => {
         setRecentlyViewed(prev => {
+            // Check if this product is already the most recent
+            if (prev.length > 0 && prev[0].id === product.id) {
+                return prev; // No change needed
+            }
             // Remove if already exists
             const filtered = prev.filter(item => item.id !== product.id);
             // Add to beginning and limit to 10 items
             return [product, ...filtered].slice(0, 10);
         });
-    };
+    }, []);
 
-    const clearRecentlyViewed = () => {
+    const clearRecentlyViewed = useCallback(() => {
         setRecentlyViewed([]);
-    };
+    }, []);
 
     return (
         <RecentlyViewedContext.Provider value={{

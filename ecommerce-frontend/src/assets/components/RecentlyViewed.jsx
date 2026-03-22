@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useRecentlyViewed } from '../../context/RecentlyViewedContext';
 import ProductCard from './ProductCard';
 
-const RecentlyViewed = () => {
+const RecentlyViewed = memo(() => {
     const { recentlyViewed } = useRecentlyViewed();
 
     if (recentlyViewed.length === 0) {
@@ -23,6 +23,6 @@ const RecentlyViewed = () => {
             </div>
         </div>
     );
-};
+});
 
 export default RecentlyViewed;
