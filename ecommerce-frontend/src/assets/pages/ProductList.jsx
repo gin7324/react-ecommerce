@@ -46,7 +46,7 @@ const defaultProducts = [
     }
 ];
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || "https://fakestoreapi.com";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "https://react-ecommerce-1-vu7x.onrender.com/api/products";
 
 const ProductList = () => {
     const [apiProducts, setApiProducts] = useState([]);
@@ -54,7 +54,7 @@ const ProductList = () => {
     
     //fetch products when component loads
     useEffect(() => {
-        const url = `https://react-ecommerce-1-vu7x.onrender.com/api/products`;
+        const url = `${API_BASE_URL}/products`;
         console.log("ProductList fetching", url);
         fetch(url)
             .then(res => {
