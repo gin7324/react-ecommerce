@@ -9,7 +9,7 @@ const Header = () => {
                 <div></div> {/* Spacer */}
                 <div>
                     <h1 className="store-title">ZKRA STORE</h1>
-                    <p className="store-subtitle">Find the best products here!</p>
+                    <p className="store-subtitle">Your one-stop shop for all your needs</p>
                 </div>
                 <button 
                     className="btn btn-outline-light"
