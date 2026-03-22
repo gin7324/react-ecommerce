@@ -4,11 +4,11 @@ const Sidebar = () => {
     const [categories, setCategories] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+    const API_BASE_URL = import.meta.env.VITE_API_URL || "https://fakestoreapi.com";
 
     useEffect(() => {
-        // Fetch categories from backend API
-        fetch(`${API_BASE_URL}/api/categories`)
+        // Fetch categories from Fake Store API
+        fetch(`${API_BASE_URL}/products/categories`)
             .then(res => {
                 if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
                 return res.json();

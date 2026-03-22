@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "https://fakestoreapi.com";
 
 const Home = () => {
     const [products, setProducts] = useState([]);
@@ -23,11 +23,11 @@ const Home = () => {
             .then((data) => {
                 const formatted = data.slice(0, 4).map(item => ({
                     id: item.id,
-                    name: item.name,
-                    oldPrice: item.oldPrice,
+                    name: item.title,
+                    oldPrice: (item.price * 1.2).toFixed(2),
                     price: item.price,
-                    discount: item.discount,
-                    rating: item.rating,
+                    discount: Math.round((item.price * 0.2) / item.price * 100),
+                    rating: Math.round(item.rating?.rate || 0),
                     image: item.image
                 }));
                 setProducts(formatted);

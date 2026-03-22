@@ -46,7 +46,7 @@ const defaultProducts = [
     }
 ];
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "https://fakestoreapi.com";
 
 const ProductList = () => {
     const [apiProducts, setApiProducts] = useState([]);
@@ -62,7 +62,15 @@ const ProductList = () => {
                 return res.json();
             })
             .then(data => {
-                setApiProducts(data);
+                setApiProducts(data.map(item => ({
+                    id: item.id,
+                    name: item.title,
+                    price: item.price,
+                    oldPrice: (item.price * 1.2).toFixed(2),
+                    rating: Math.round(item.rating?.rate || 0),
+                    discount: Math.round((item.price * 0.2) / item.price * 100),
+                    image: item.image
+                })));
                 setLoading(false);
             })
             .catch(err => {
