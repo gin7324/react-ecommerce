@@ -17,7 +17,7 @@ export default defineConfig({
         name: 'React E-Commerce App',
         short_name: 'ECommerce',
         description: 'React E-Commerce',
-        theme_color: '#000000',
+        theme_color: '#c18100',
         background_color: '#ffffff',
         display: 'standalone',
         icons: [
