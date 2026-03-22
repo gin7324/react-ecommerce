@@ -4,10 +4,10 @@ const Sidebar = () => {
     const [categories, setCategories] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    const API_BASE_URL = import.meta.env.VITE_API_URL || "https://dummyjson.com";
+    const API_BASE_URL = import.meta.env.VITE_API_URL || "https://react-ecommerce-1-vu7x.onrender.com";
 
     useEffect(() => {
-        // Fetch categories from DummyJSON API
+        // Fetch categories from backend API
         fetch(`${API_BASE_URL}/products/categories`)
             .then(res => {
                 if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);

@@ -10,13 +10,13 @@ import { Link } from "react-router-dom";
 
 
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || "https://dummyjson.com";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "https://react-ecommerce-1-vu7x.onrender.com";
 
 const Home = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        const url = `${API_BASE_URL}/products/category/electronics`;
+        const url = `${API_BASE_URL}/products`;
         console.log("Home fetching", url);
         fetch(url)
             .then((res) => {
@@ -25,14 +25,15 @@ const Home = () => {
             })
             .then((data) => {
                 console.log("Home API Response:", data);
-                const formatted = (data.products || []).slice(0, 4).map(item => ({
+                // Transform fakestoreapi data and take first 4
+                const formatted = data.slice(0, 4).map(item => ({
                     id: item.id,
                     name: item.title,
                     oldPrice: (item.price * 1.2).toFixed(2),
                     price: item.price,
-                    discount: 20,
-                    rating: Math.round(item.rating || 0),
-                    image: item.thumbnail || item.images?.[0] || ""
+                    discount: Math.round((item.price * 0.2) / item.price * 100),
+                    rating: Math.round(item.rating?.rate || 0),
+                    image: item.image
                 }));
                 setProducts(formatted);
             })
