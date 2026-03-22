@@ -22,8 +22,8 @@ const Home = () => {
             })
             .then((data) => {
                 console.log("Home API Response:", data);
-                // Transform fakestoreapi data and take first 4
-                const formatted = data.slice(0, 4).map(item => ({
+                // Transform fakestoreapi data and take first 2
+                const formatted = data.slice(0, 2).map(item => ({
                     id: item.id,
                     name: item.title,
                     oldPrice: (item.price * 1.2).toFixed(2),
@@ -67,11 +67,11 @@ const Home = () => {
                     </div>
                     <div className="hero-stats">
                         <div className="stat-item">
-                            <div className="stat-number">1000+</div>
+                            <div className="stat-number">✅</div>
                             <div className="stat-label">Products</div>
                         </div>
                         <div className="stat-item">
-                            <div className="stat-number">50+</div>
+                            <div className="stat-number">✅</div>
                             <div className="stat-label">Categories</div>
                         </div>
                         <div className="stat-item">
