@@ -12,7 +12,7 @@ const Navbar = () => {
             <nav className="navbar navbar-expand-lg navbar-light bg-light d-none d-lg-block shadow-sm">
                 <div className="container">
                     <Link className="navbar-brand fw-bold" to="/">
-                        zKr
+                        ZKRA - ALL GOODS IN ONE PLACE
                     </Link>
 
                     <button
