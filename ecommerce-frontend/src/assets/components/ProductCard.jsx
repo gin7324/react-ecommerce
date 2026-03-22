@@ -21,9 +21,6 @@ const ProductCard = memo(({ product }) => {
                             <span className="discount-text">-{product.discount}%</span>
                         </div>
                     )}
-                    <div className="wishlist-icon">
-                        <i className="far fa-heart"></i>
-                    </div>
                     <img src={product.image} className="product-image" alt={product.name} />
                     <div className="product-overlay">
                         <button
