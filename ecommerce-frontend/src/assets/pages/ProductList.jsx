@@ -68,7 +68,7 @@ const ProductList = () => {
     
     //fetch products when component loads
     useEffect(() => {
-        const url = `${API_BASE_URL}/api/products`;
+        const url = `${API_BASE_URL}/products`;
         console.log("ProductList fetching", url);
         fetch(url)
             .then(res => {
@@ -161,11 +161,7 @@ const ProductList = () => {
             <div className="row">
                 {/* Sidebar */}
                 <div className="col-lg-2 col-md-3 mb-4">
-                    <Sidebar
-                        selectedCategory={selectedCategory}
-                        onCategoryChange={setSelectedCategory}
-                        categories={categories}
-                    />
+                    <Sidebar />
                 </div>
 
                 {/* Main Content */}
@@ -192,13 +188,9 @@ const ProductList = () => {
                                     onChange={(e) => setSelectedCategory(e.target.value)}
                                 >
                                     <option value="">All Categories</option>
-                                    {categories.length > 0 ? (
-                                        categories.map(category => (
-                                            <option key={category} value={category}>{category}</option>
-                                        ))
-                                    ) : (
-                                        <option disabled>No categories loaded</option>
-                                    )}
+                                    {categories.map(category => (
+                                        <option key={category} value={category}>{category}</option>
+                                    ))}
                                 </select>
                             </div>
                             
