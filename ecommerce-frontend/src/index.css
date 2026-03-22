@@ -285,9 +285,13 @@ button:hover::before {
 
 @keyframes colorShift {
   0% { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+  12.5% { background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%); }
   25% { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+  37.5% { background: linear-gradient(135deg, #ec4899 0%, #f97316 100%); }
   50% { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+  62.5% { background: linear-gradient(135deg, #06b6d4 0%, #10b981 100%); }
   75% { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+  87.5% { background: linear-gradient(135deg, #22c55e 0%, #8b5cf6 100%); }
   100% { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
 }
 
