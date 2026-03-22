@@ -68,7 +68,7 @@ const ProductList = () => {
     
     //fetch products when component loads
     useEffect(() => {
-        const url = `${API_BASE_URL}/api/products`;
+        const url = `${API_BASE_URL}/products`;
         console.log("ProductList fetching", url);
         fetch(url)
             .then(res => {

@@ -8,7 +8,7 @@ const Sidebar = () => {
 
     useEffect(() => {
         // Fetch categories from backend API
-        fetch(`${API_BASE_URL}/api/categories`)
+        fetch(`${API_BASE_URL}/products/categories`)
             .then(res => {
                 if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
                 return res.json();
