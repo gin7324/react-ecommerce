@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from './context/ThemeContext';
 
 import Header from './assets/components/Header';
 import Navbar from './assets/components/Navbar';
@@ -14,26 +15,28 @@ import Checkout from './assets/pages/Checkout';
 
 function App() {
   return (
-    <Router>
-      {/* Always full width */}
-      <Header />
-      <Navbar />
+    <ThemeProvider>
+      <Router>
+        {/* Always full width */}
+        <Header />
+        <Navbar />
 
-      {/* Main content wrapper - full width, no shrinking */}
-      <div className="container-fluid px-4 py-4">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/products" element={<ProductList />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/policies" element={<Policies />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/checkout" element={<Checkout />} />
-        </Routes>
-      </div>
+        {/* Main content wrapper - full width, no shrinking */}
+        <div className="container-fluid px-4 py-4">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/products" element={<ProductList />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/policies" element={<Policies />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
+          </Routes>
+        </div>
 
-      <Footer />
-    </Router>
+        <Footer />
+      </Router>
+    </ThemeProvider>
   );
 }
 
