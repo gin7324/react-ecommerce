@@ -46,7 +46,7 @@ const defaultProducts = [
     }
 ];
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || "https://react-ecommerce-1-vu7x.onrender.com/api/products";
+const API_BASE_URL = "https://react-ecommerce-1-vu7x.onrender.com";
 
 const ProductList = () => {
     const [apiProducts, setApiProducts] = useState([]);
