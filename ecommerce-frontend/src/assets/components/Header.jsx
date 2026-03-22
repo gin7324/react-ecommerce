@@ -5,7 +5,7 @@ const Header = () => {
     const { isDarkMode, toggleTheme } = useTheme();
 
     return (
-        <header className="bg-dark text-white p-3 text-center custom-header">
+        <header className="modern-header">
             <div className="d-flex justify-content-between align-items-center">
                 <div></div> {/* Spacer */}
                 <div className="text-center">
