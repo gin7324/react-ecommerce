@@ -1,13 +1,10 @@
-import { useTheme } from '../../context/ThemeContext';
+import React from 'react';
 import logo from '../assets/images/zkr.jpg';
 
 const Header = () => {
-    const { isDarkMode, toggleTheme } = useTheme();
-
     return (
         <header className="modern-header">
-            <div className="d-flex justify-content-between align-items-center">
-                <div></div> {/* Spacer */}
+            <div className="d-flex justify-content-center align-items-center">
                 <div className="text-center">
                     <img 
                         src={logo} 
@@ -18,13 +15,6 @@ const Header = () => {
                     <h1 className="store-title">ZKRA STORE</h1>
                     <p className="store-subtitle">Your one-stop shop for all your needs</p>
                 </div>
-                <button 
-                    className="btn btn-outline-light"
-                    onClick={toggleTheme}
-                    title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-                >
-                    {isDarkMode ? 'Light' : 'Dark'}
-                </button>
             </div>
         </header>
     );

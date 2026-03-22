@@ -304,6 +304,62 @@ button:hover::before {
   font-size: 1.1rem;
   opacity: 0.9;
   margin: 0;
+}
+
+/* Recently Viewed Styles */
+.recently-viewed-section {
+  border-top: 2px solid var(--border-color);
+  padding-top: 2rem;
+}
+
+.section-title {
+  color: var(--text-primary);
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--primary-gradient);
+  border-radius: 2px;
+}
+
+.recently-viewed-container {
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+.recently-viewed-grid {
+  display: flex;
+  gap: 1rem;
+  min-width: max-content;
+  padding-bottom: 0.5rem;
+}
+
+.recently-viewed-item {
+  flex: 0 0 280px;
+  transition: transform 0.3s ease;
+}
+
+.recently-viewed-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .recently-viewed-item {
+    flex: 0 0 250px;
+  }
+  
+  .store-title {
+    font-size: 2rem;
+  }
 }button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;

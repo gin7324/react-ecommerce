@@ -1,9 +1,17 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 // context folder is outside of assets
 import { CartContext } from '../../context/CartContext';
+import { useRecentlyViewed } from '../../context/RecentlyViewedContext';
 
 const ProductCard = ({ product }) => {
     const { addToCart } = useContext(CartContext);
+    const { addToRecentlyViewed } = useRecentlyViewed();
+
+    // Add to recently viewed when component mounts (when product is viewed)
+    useEffect(() => {
+        addToRecentlyViewed(product);
+    }, [product, addToRecentlyViewed]);
+
     return (
         <div className="card h-100 shadow-sm">
             <div className="product-img-wrapper">

@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ThemeProvider } from './context/ThemeContext';
+import { RecentlyViewedProvider } from './context/RecentlyViewedContext';
 
 import Header from './assets/components/Header';
 import Navbar from './assets/components/Navbar';
@@ -15,7 +15,7 @@ import Checkout from './assets/pages/Checkout';
 
 function App() {
   return (
-    <ThemeProvider>
+    <RecentlyViewedProvider>
       <Router>
         {/* Always full width */}
         <Header />
@@ -36,7 +36,7 @@ function App() {
 
         <Footer />
       </Router>
-    </ThemeProvider>
+    </RecentlyViewedProvider>
   );
 }
 

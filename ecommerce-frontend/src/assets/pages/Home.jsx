@@ -1,5 +1,6 @@
 
 import ProductCard from "../components/ProductCard";
+import RecentlyViewed from "../components/RecentlyViewed";
 import BannerImg from "../assets/images/Banner.jpg";
 import MonitorImg from "../assets/images/4k monitor.jpg";
 import KeyboardImg from "../assets/images/mechkey.jpg";
@@ -85,6 +86,9 @@ const Home = () => {
                     </div>
                 ))}
             </div>
+
+            {/* Recently Viewed Products */}
+            <RecentlyViewed />
         </div>
     );
 };
