@@ -79,8 +79,18 @@ const ProductList = () => {
             })
             .then(data => {
                 console.log("API Response:", data);
-                // Custom backend already returns data in correct format
-                setApiProducts(data);
+                // Transform fakestoreapi data to match our component expectations
+                const transformedData = data.map(item => ({
+                    id: item.id,
+                    name: item.title,
+                    price: item.price,
+                    oldPrice: (item.price * 1.2).toFixed(2),
+                    rating: Math.round(item.rating?.rate || 0),
+                    discount: Math.round((item.price * 0.2) / item.price * 100),
+                    image: item.image,
+                    category: item.category
+                }));
+                setApiProducts(transformedData);
                 setLoading(false);
             })
             .catch(err => {
