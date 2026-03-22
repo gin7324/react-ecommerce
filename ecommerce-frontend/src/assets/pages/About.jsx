@@ -20,6 +20,7 @@ const About = () => {
                             <li><strong>React:</strong> A powerful JavaScript library for building interactive user interfaces.</li>
                             <li><strong>Bootstrap:</strong> A popular CSS framework that helps us create a clean and responsive design.</li>
                             <li><strong>Node.js & Express:</strong> Our backend is powered by Node.js and Express, allowing us to handle API requests efficiently.</li>
+                        </ul>
                     </p>
                     <h3>Our Promise</h3>
                     <p>
