@@ -12,12 +12,12 @@ const About = () => {
                         Every product we offer is carefully selected and crafted to meet the highest standards, 
                         ensuring that you get the best value for your money.
                     </p>
-                    <h2>Technology Behind The Website</h2>
+                    <h3>Technology Behind The Website</h3>
                     <p>
                         This website is built using modern web technologies to provide a fast, 
                         responsive, and user-friendly experience:
                     </p>
-                    <h2>Our Promis</h2>
+                    <h3>Our Promise</h3>
                     <p>
                         We believe shopping should be simple, enjoyable, and affordable. That’s why we focus on:
                         <ul>
@@ -26,7 +26,7 @@ const About = () => {
                             <li><strong>Customer Satisfaction:</strong> Your satisfaction is our top priority. We are here to help with any questions or concerns you may have.</li>
                         </ul>
                     </p>
-                    <h2>Contact Us</h2>
+                    <h3>Contact Us</h3>
                     <p>
                         If you have any questions, feedback, or need assistance, please don’t hesitate to contact us. 
                         We are here to help and ensure you have the best shopping experience possible.
