@@ -15,7 +15,9 @@ const Home = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch(`${API_BASE_URL}/api/products`)
+        const url = `${API_BASE_URL}/products`;
+        console.log("Home fetching", url);
+        fetch(url)
             .then((res) => {
                 if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
                 return res.json();
