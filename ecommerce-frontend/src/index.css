@@ -385,6 +385,16 @@ button:hover::before {
 .social-icon:hover {
   color: var(--primary-dark);
   transform: translateY(-2px);
+}
+
+.social-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.social-link:hover .social-icon {
+  color: var(--primary-dark);
+  transform: translateY(-2px);
 }button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
