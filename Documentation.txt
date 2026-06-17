@@ -1,0 +1,14 @@
+Name: Gene Kenry D. Peralta
+Course and Section: IT0063 TW25
+Date Submitted: 3/22/2026
+
+GitHub Repositories
+
+Frontend Repository: https://github.com/gin7324/react-ecommerce/tree/main/ecommerce-backend
+ 
+Backend Repository: https://github.com/gin7324/react-ecommerce/tree/main/ecommerce-frontend
+
+Deployed URLs
+
+Frontend URL (Vercel): https://react-ecommerce-silk-eight.vercel.app
+Backend URL (Render): https://react-ecommerce-1-vu7x.onrender.com
