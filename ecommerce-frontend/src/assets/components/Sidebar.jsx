@@ -25,19 +25,19 @@ const Sidebar = () => {
     }, []);
 
     return (
-        <aside className="bg-light p-3">
-            <h2>Categories</h2>
+        <aside className="bg-dark p-3 rounded-4" style={{ border: '1px solid rgba(255,255,255,0.08)' }}>
+            <h2 className="text-light">Categories</h2>
             <ul className="list-group">
                 {loading ? (
-                    <li className="list-group-item">Loading categories...</li>
+                    <li className="list-group-item bg-dark text-secondary border-secondary">Loading categories...</li>
                 ) : categories.length > 0 ? (
                     categories.map((category) => (
-                        <li key={category} className="list-group-item">
+                        <li key={category} className="list-group-item bg-dark text-secondary border-secondary">
                             {category}
                         </li>
                     ))
                 ) : (
-                    <li className="list-group-item">No categories available</li>
+                    <li className="list-group-item bg-dark text-secondary border-secondary">No categories available</li>
                 )}
             </ul>
         </aside>

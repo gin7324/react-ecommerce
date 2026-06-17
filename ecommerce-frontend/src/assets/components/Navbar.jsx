@@ -100,7 +100,7 @@ const Navbar = () => {
                                     {" "}
                                     Cart
                                     {totalQty > 0 && (
-                                        <span className="badge bg-secondary ms-1">
+                                        <span className="badge ms-1" style={{ backgroundColor: '#c0c0c0', color: '#090909', fontWeight: 700 }}>
                                             {totalQty}
                                         </span>
                                     )}
@@ -112,7 +112,7 @@ const Navbar = () => {
             </nav>
 
             {/* =============== MOBILE BOTTOM NAVIGATION ================= */}
-            <nav className="navbar fixed-bottom bg-light border-top d-lg-none shadow-lg">
+            <nav className="navbar fixed-bottom border-top d-lg-none" style={{ backgroundColor: '#121212', borderTop: '1px solid rgba(255,255,255,0.12)' }}>
                 <div className="container-fluid d-flex justify-content-around text-center">
                     {/* Home */}
                     <NavLink
@@ -120,8 +120,8 @@ const Navbar = () => {
                         end
                         className={({ isActive }) =>
                             isActive
-                                ? "text-primary text-decoration-none"
-                                : "text-dark text-decoration-none"
+                                ? "text-silver-active text-decoration-none"
+                                : "text-silver text-decoration-none"
                         }
                     >
                         <div>
@@ -135,8 +135,8 @@ const Navbar = () => {
                         to="/products"
                         className={({ isActive }) =>
                             isActive
-                                ? "text-primary text-decoration-none"
-                                : "text-dark text-decoration-none"
+                                ? "text-silver-active text-decoration-none"
+                                : "text-silver text-decoration-none"
                         }
                     >
                         <div>
@@ -150,8 +150,8 @@ const Navbar = () => {
                         to="/cart"
                         className={({ isActive }) =>
                             isActive
-                                ? "text-primary text-decoration-none position-relative"
-                                : "text-dark text-decoration-none position-relative"
+                                ? "text-silver-active text-decoration-none position-relative"
+                                : "text-silver text-decoration-none position-relative"
                         }
                     >
                         <div className="position-relative">
@@ -159,8 +159,8 @@ const Navbar = () => {
 
                             {totalQty > 0 && (
                                 <span
-                                    className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                                    style={{ fontSize: "10px" }}
+                                    className="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+                                    style={{ fontSize: "10px", backgroundColor: '#c0c0c0', color: '#090909' }}
                                 >
                                     {totalQty}
                                 </span>
@@ -175,8 +175,8 @@ const Navbar = () => {
                         to="/about"
                         className={({ isActive }) =>
                             isActive
-                                ? "text-primary text-decoration-none"
-                                : "text-dark text-decoration-none"
+                                ? "text-silver-active text-decoration-none"
+                                : "text-silver text-decoration-none"
                         }
                     >
                         <div>
@@ -190,8 +190,8 @@ const Navbar = () => {
                         to="/contact"
                         className={({ isActive }) =>
                             isActive
-                                ? "text-primary text-decoration-none"
-                                : "text-dark text-decoration-none"
+                                ? "text-silver-active text-decoration-none"
+                                : "text-silver text-decoration-none"
                         }
                     >
                         <div>

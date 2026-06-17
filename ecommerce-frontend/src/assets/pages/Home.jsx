@@ -59,7 +59,7 @@ const Home = () => {
                                 <i className="fas fa-shopping-bag me-2"></i>
                                 Shop Now
                             </Link>
-                            <Link to="/about" className="btn btn-outline-light btn-lg">
+                            <Link to="/about" className="btn btn-silver-outline btn-lg">
                                 <i className="fas fa-info-circle me-2"></i>
                                 Learn More
                             </Link>
