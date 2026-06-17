@@ -48,11 +48,11 @@ const Home = () => {
                     <div className="hero-text">
                         <h1 className="hero-title">
                             Discover Amazing Products at
-                            <span className="highlight"> ZKRA Store</span>
+                            <span className="highlight"> AetherWorkz</span>
                         </h1>
-                        <p className="hero-subtitle">
-                            Your one-stop destination for quality products at unbeatable prices.
-                            From electronics to fashion, we have everything you need.
+                        <p className="hero-subtitle" style={{ color: '#c0c0c0' }}>
+                            Your destination for premium tech, sleek accessories, and powerful solutions.
+                            Designed for performance, styled in black and silver.
                         </p>
                         <div className="hero-buttons">
                             <Link to="/products" className="btn btn-primary btn-lg">

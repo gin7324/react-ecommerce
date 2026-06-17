@@ -143,7 +143,7 @@ const ProductList = () => {
                     </div>
                     {/* Products Skeleton */}
                     <div className="col-lg-10 col-md-9">
-                        <h2 className="mb-3">All Products</h2>
+                        <h2 className="mb-3" style={{ color: '#e8e8e8' }}>All Products</h2>
                         <div className="row">
                             <SkeletonLoading />
                         </div>

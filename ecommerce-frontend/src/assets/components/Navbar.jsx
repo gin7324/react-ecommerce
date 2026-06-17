@@ -9,10 +9,10 @@ const Navbar = () => {
     return (
         <>
             {/* =============== DESKTOP NAVBAR ============================ */}
-            <nav className="navbar navbar-expand-lg navbar-light bg-light d-none d-lg-block shadow-sm">
+            <nav className="navbar navbar-expand-lg navbar-dark d-none d-lg-block shadow-sm" style={{ backgroundColor: '#121212', borderBottom: '1px solid #c0c0c0' }}>
                 <div className="container">
-                    <Link className="navbar-brand fw-bold" to="/">
-                        ZKRA - ALL GOODS IN ONE PLACE
+                    <Link className="navbar-brand fw-bold" to="/" style={{ color: '#e8e8e8' }}>
+                        AETHERWORKZ SYSTEMS
                     </Link>
 
                     <button

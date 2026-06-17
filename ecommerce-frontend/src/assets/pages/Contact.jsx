@@ -37,7 +37,7 @@ const Contact = () => {
                             <textarea className="form-control" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
                         </div>
 
-                        <button type="submit" className="btn btn-success">
+                        <button type="submit" className="btn" style={{ backgroundColor: '#c0c0c0', color: '#0a0a0a', border: '1px solid #c0c0c0' }}>
                             <i className="fas fa-paper-plane me-2"></i>
                             Send Message
                         </button>

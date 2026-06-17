@@ -3,9 +3,9 @@ const About = () => {
         <div className="container">
             <div className="row">
                 <div className="col-lg-8">
-                    <h2 className="mb-4">About Our Store</h2>
-                    <p className="mb-4">
-                        We are committed to delivering high-quality products at prices that remain accessible to everyone. Our mission is to combine durability, style, and functionality so that customers can enjoy premium items without the premium cost. Every product we offer is carefully selected and crafted to meet the highest standards, ensuring that you get the best value for your money.
+                    <h2 className="mb-4" style={{ color: '#e8e8e8' }}>About AetherWorkz Systems</h2>
+                    <p className="mb-4" style={{ color: '#a9a9a9' }}>
+                        AetherWorkz Systems is dedicated to delivering premium tech products with a refined black and silver aesthetic. Our mission is to combine innovation, reliability, and style so every customer enjoys a next-level shopping experience.
                     </p>
                     <h3 className="mt-4 mb-3">Technology Behind The Website</h3>
                     <p className="mb-2">
