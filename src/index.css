@@ -1,0 +1,138 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: #e8e8e8;
+  background-color: #0a0a0a;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #c0c0c0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #e8e8e8;
+  text-shadow: 0 0 8px rgba(192, 192, 192, 0.5);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0f0f0f;
+  color: #e8e8e8;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: #e8e8e8;
+}
+
+h2, h3, h4, h5, h6 {
+  color: #d3d3d3;
+}
+
+button {
+  border-radius: 8px;
+  border: 2px solid #c0c0c0;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: #e8e8e8;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #2d2d2d;
+  border-color: #e8e8e8;
+  box-shadow: 0 0 10px rgba(192, 192, 192, 0.3);
+}
+
+button:active {
+  background-color: #3d3d3d;
+}
+
+input, textarea, select {
+  background-color: #1a1a1a;
+  color: #e8e8e8;
+  border: 1px solid #c0c0c0;
+  padding: 0.5em;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #e8e8e8;
+  box-shadow: 0 0 5px rgba(192, 192, 192, 0.3);
+}
+
+/* Product image zoom on hover */
+.product-img-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.product-img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Zoom effect like Shopee/Lazada */
+.product-img-wrapper:hover .product-img {
+  transform: scale(1.1);
+}
+
+/* Sale badge */
+.sale-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #c0c0c0;
+  color: #0a0a0a;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(192, 192, 192, 0.4);
+}
+
+/* Carousel banner styling */
+#bannerCarousel {
+  max-height: 300px;
+  overflow: hidden;
+  border: 2px solid #c0c0c0;
+  border-radius: 8px;
+}
+
+#bannerCarousel img {
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Star rating styling */
+.star-rating {
+  display: flex;
+  gap: 2px;
+  margin: 8px 0;
+}
+
+.star-rating i {
+  color: #c0c0c0;
+  font-size: 14px;
+}
