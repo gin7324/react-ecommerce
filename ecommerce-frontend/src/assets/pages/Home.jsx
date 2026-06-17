@@ -42,188 +42,153 @@ const Home = () => {
 
     return (
         <div className="home-page">
-            {/* Hero Section */}
             <section className="hero-section">
-                <div className="hero-content">
-                    <div className="hero-text">
-                        <h1 className="hero-title">
-                            Discover Amazing Products at
-                            <span className="highlight"> AetherWorkz</span>
-                        </h1>
-                        <p className="hero-subtitle" style={{ color: '#c0c0c0' }}>
-                            Your destination for premium tech, sleek accessories, and powerful solutions.
-                            Designed for performance, styled in black and silver.
+                <div className="hero-inner container">
+                    <div className="hero-copy">
+                        <span className="eyebrow">Enterprise digital commerce</span>
+                        <h1 className="hero-title">AetherWorkz Systems: Bespoke Retail Experiences for Modern Teams</h1>
+                        <p className="hero-text">
+                            We create polished B2B storefronts with premium black-and-silver aesthetics,
+                            seamless navigation, and conversion-led messaging built for fast, accessible growth.
                         </p>
-                        <div className="hero-buttons">
+                        <div className="hero-actions">
                             <Link to="/products" className="btn btn-primary btn-lg">
-                                <i className="fas fa-shopping-bag me-2"></i>
-                                Shop Now
+                                Explore Products
                             </Link>
-                            <Link to="/about" className="btn btn-silver-outline btn-lg">
-                                <i className="fas fa-info-circle me-2"></i>
-                                Learn More
+                            <Link to="/about" className="btn btn-outline-light btn-lg">
+                                Learn About Us
                             </Link>
                         </div>
                     </div>
-                    <div className="hero-stats">
-                        <div className="stat-item">
-                            <div className="stat-number">✅</div>
-                            <div className="stat-label">Products</div>
+
+                    <div className="hero-panel">
+                        <div className="hero-stat">
+                            <span>38+</span>
+                            <p>High-value products</p>
                         </div>
-                        <div className="stat-item">
-                            <div className="stat-number">✅</div>
-                            <div className="stat-label">Categories</div>
+                        <div className="hero-stat">
+                            <span>99.9%</span>
+                            <p>Uptime for customer sites</p>
                         </div>
-                        <div className="stat-item">
-                            <div className="stat-number">24/7</div>
-                            <div className="stat-label">Support</div>
+                        <div className="hero-stat">
+                            <span>24/7</span>
+                            <p>Dedicated client support</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Separated Carousel Section */}
-            <section className="carousel-section">
+            <section className="overview-section section-surface">
                 <div className="container">
-                    <div id="heroCarousel" className="carousel slide" data-bs-ride="carousel">
-                        <div className="carousel-inner">
-                            <div className="carousel-item active">
-                                <img src={BannerImg} className="d-block w-100" alt="Premium Electronics" />
-                                <div className="carousel-caption">
-                                    <h3>Premium Electronics</h3>
-                                    <p>Latest gadgets and tech accessories</p>
-                                </div>
-                            </div>
-                            <div className="carousel-item">
-                                <img src={SecondImg} className="d-block w-100" alt="Jackets" />
-                                <div className="carousel-caption">
-                                    <h3>Jackets</h3>
-                                    <p>Stylish and comfortable jackets for all seasons</p>
-                                </div>
-                            </div>
-                            <div className="carousel-item">
-                                <img src={ThirdImg} className="d-block w-100" alt="rings" />
-                                <div className="carousel-caption">
-                                    <h3>Rings and Accessories</h3>
-                                    <p>Elegant and unique rings and accessories for every occasion </p>
-                                </div>
-                            </div>
+                    <div className="overview-grid">
+                        <div className="overview-copy">
+                            <span className="eyebrow">Company overview</span>
+                            <h2>We help brands convert professional audiences with confident digital experiences.</h2>
+                            <p>
+                                AetherWorkz Systems combines premium visual design, reliable engineering, and strategic user journeys to help growing businesses make every digital interaction feel polished, professional, and effortless.
+                            </p>
                         </div>
-                        <button className="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span className="visually-hidden">Previous</span>
-                        </button>
-                        <button className="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span className="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
-            </section>
-
-            {/* Categories Section */}
-            <section className="categories-section">
-                <div className="container">
-                    <div className="section-header">
-                        <h2 className="section-title">Shop by Category</h2>
-                        <p className="section-subtitle">Explore our wide range of product categories</p>
-                    </div>
-                    <div className="categories-grid">
-                        <div className="category-card">
-                            <div className="category-icon">
-                                <i className="fas fa-laptop"></i>
+                        <div className="overview-cards">
+                            <div className="glass-card">
+                                <h3>Discovery & strategy</h3>
+                                <p>Align product goals, customer needs, and revenue paths in a focused go-to-market plan.</p>
                             </div>
-                            <h3>Electronics</h3>
-                            <p>Laptops, phones, and gadgets</p>
-                        </div>
-                        <div className="category-card">
-                            <div className="category-icon">
-                                <i className="fas fa-tshirt"></i>
+                            <div className="glass-card">
+                                <h3>Design systems</h3>
+                                <p>Create reusable UI patterns and brand-consistent interfaces for every channel.</p>
                             </div>
-                            <h3>Fashion</h3>
-                            <p>Clothing and accessories</p>
-                        </div>
-                        <div className="category-card">
-                            <div className="category-icon">
-                                <i className="fas fa-home"></i>
+                            <div className="glass-card">
+                                <h3>Platform delivery</h3>
+                                <p>Build secure, scalable commerce experiences optimized for speed and conversions.</p>
                             </div>
-                            <h3>Home & Living</h3>
-                            <p>Furniture and decor</p>
-                        </div>
-                        <div className="category-card">
-                            <div className="category-icon">
-                                <i className="fas fa-gamepad"></i>
-                            </div>
-                            <h3>Gaming</h3>
-                            <p>Consoles and accessories</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Featured Products Section */}
-            <section className="featured-products-section">
+            <section className="services-section">
                 <div className="container">
-                    <div className="section-header">
-                        <h2 className="section-title">Featured Products</h2>
-                        <p className="section-subtitle">Handpicked products just for you</p>
+                    <div className="section-heading">
+                        <span className="eyebrow">Service offerings</span>
+                        <h2>Services designed for modern retail teams and enterprise buyers.</h2>
                     </div>
-                    <div className="products-grid">
-                        {products.map((product, index) => (
-                            <div key={index} className="product-item">
-                                <ProductCard product={product} />
-                            </div>
-                        ))}
-                    </div>
-                    <div className="text-center mt-4">
-                        <Link to="/products" className="btn btn-primary btn-lg">
-                            <i className="fas fa-arrow-right me-2"></i>
-                            View All Products
-                        </Link>
+                    <div className="services-grid">
+                        <article className="service-card glass-panel">
+                            <h3>Product Strategy</h3>
+                            <p>Prioritize product features, clarify customer journeys, and launch with confidence.</p>
+                        </article>
+                        <article className="service-card glass-panel">
+                            <h3>Experience Design</h3>
+                            <p>Deliver intuitive interfaces with accessible interactions and branded motion.</p>
+                        </article>
+                        <article className="service-card glass-panel">
+                            <h3>Engineering & Launch</h3>
+                            <p>Deploy resilient storefronts with fast load times and predictable performance.</p>
+                        </article>
                     </div>
                 </div>
             </section>
 
-            {/* Features Section */}
-            <section className="features-section">
+            <section className="portfolio-section section-surface">
                 <div className="container">
-                    <div className="features-grid">
-                        <div className="feature-card">
-                            <div className="feature-icon">
-                                <i className="fas fa-shipping-fast"></i>
+                    <div className="section-heading">
+                        <span className="eyebrow">Portfolio</span>
+                        <h2>Recent work that showcases our design and delivery craft.</h2>
+                    </div>
+                    <div className="portfolio-grid">
+                        <article className="portfolio-card">
+                            <img src={BannerImg} alt="Axis Commerce" />
+                            <div>
+                                <h3>Axis Commerce</h3>
+                                <p>Streamlined B2B ecommerce platform with a conversion-first checkout experience.</p>
                             </div>
-                            <h3>Free Shipping</h3>
-                            <p>Free delivery on orders over ₱500</p>
-                        </div>
-                        <div className="feature-card">
-                            <div className="feature-icon">
-                                <i className="fas fa-shield-alt"></i>
+                        </article>
+                        <article className="portfolio-card">
+                            <img src={SecondImg} alt="Luxe Apparel" />
+                            <div>
+                                <h3>Luxe Apparel</h3>
+                                <p>Developed a premium retail site with advanced product discovery and storytelling.</p>
                             </div>
-                            <h3>Secure Payment</h3>
-                            <p>100% secure payment processing</p>
-                        </div>
-                        <div className="feature-card">
-                            <div className="feature-icon">
-                                <i className="fas fa-undo"></i>
+                        </article>
+                        <article className="portfolio-card">
+                            <img src={ThirdImg} alt="Elemental Goods" />
+                            <div>
+                                <h3>Elemental Goods</h3>
+                                <p>Created a polished digital storefront for a luxury accessories brand.</p>
                             </div>
-                            <h3>Easy Returns</h3>
-                            <p>30-day return policy</p>
-                        </div>
-                        <div className="feature-card">
-                            <div className="feature-icon">
-                                <i className="fas fa-headset"></i>
-                            </div>
-                            <h3>24/7 Support</h3>
-                            <p>Customer support anytime</p>
-                        </div>
+                        </article>
                     </div>
                 </div>
             </section>
 
-            {/* Recently Viewed Section */}
-            <section className="recently-viewed-section">
+            <section className="testimonials-section">
                 <div className="container">
-                    <RecentlyViewed />
+                    <div className="section-heading text-center">
+                        <span className="eyebrow">Client testimonials</span>
+                        <h2>Trusted by clients who expect premium delivery.</h2>
+                    </div>
+                    <div className="testimonials-grid">
+                        <blockquote className="testimonial-card glass-panel">
+                            <p>“AetherWorkz transformed our product launch with a modern, enterprise-ready storefront that elevated our brand and improved lead quality.”</p>
+                            <footer>— Jaime Patel, VP Marketing</footer>
+                        </blockquote>
+                        <blockquote className="testimonial-card glass-panel">
+                            <p>“Their design and execution felt meticulously modern. The result was a fast, elegant site that immediately improved buyer confidence.”</p>
+                            <footer>— Nia Hughes, Head of Product</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
+
+            <section className="cta-section">
+                <div className="container cta-panel glass-panel">
+                    <div>
+                        <span className="eyebrow">Ready to get started?</span>
+                        <h2>Let’s build a premium digital experience for your audience.</h2>
+                    </div>
+                    <Link to="/contact" className="btn btn-primary btn-xl">
+                        Schedule a consultation
+                    </Link>
                 </div>
             </section>
         </div>
