@@ -1,0 +1,33 @@
+/* Readability overrides for overview, services, portfolio, testimonials, CTA */
+.overview-section.section-surface,
+.services-section,
+.portfolio-section.section-surface,
+.testimonials-section {
+  background: rgba(0,0,0,0.85) !important;
+}
+
+.overview-copy p,
+.service-card p,
+.portfolio-card p,
+.glass-card p,
+.testimonial-card p,
+.section-heading h2,
+.portfolio-card h3,
+.glass-card h3,
+.cta-panel h2,
+.eyebrow {
+  color: #f5f5f5 !important;
+}
+
+.glass-card,
+.glass-panel,
+.portfolio-card,
+.cta-panel {
+  background: rgba(0,0,0,0.6) !important;
+  border-color: rgba(255,255,255,0.06) !important;
+}
+
+/* Increase paragraph contrast */
+p, .home-page p {
+  color: #e6e6e6 !important;
+}
