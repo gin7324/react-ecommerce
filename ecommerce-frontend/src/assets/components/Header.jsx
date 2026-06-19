@@ -10,10 +10,9 @@ const Header = () => {
                         src={logo} 
                         alt="AetherWorkz Logo" 
                         className="logo-image mb-2" 
-                        style={{ height: '70px', width: 'auto' }}
                     />
-                    <h1 className="store-title" style={{ color: '#e8e8e8', letterSpacing: '2px' }}>AETHERWORKZ</h1>
-                    <p className="store-subtitle" style={{ color: '#a9a9a9' }}>Elevate your tech experience with premium innovation</p>
+                    <h1 className="store-title">AETHERWORKZ</h1>
+                    <p className="store-subtitle">Elevate your tech experience with premium innovation</p>
                 </div>
             </div>
         </header>
