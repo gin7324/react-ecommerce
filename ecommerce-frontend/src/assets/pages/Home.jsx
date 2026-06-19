@@ -109,21 +109,21 @@ const Home = () => {
             <section className="services-section">
                 <div className="container">
                     <div className="section-heading">
-                        <span className="eyebrow">Service offerings</span>
-                        <h2>Services designed for modern retail teams and enterprise buyers.</h2>
+                        <span className="eyebrow" color="#171717">Service offerings</span>
+                        <h2 color="#716f6f">Services designed for modern retail teams and enterprise buyers.</h2>
                     </div>
                     <div className="services-grid">
                         <article className="service-card glass-panel">
-                            <h3>Product Strategy</h3>
-                            <p>Prioritize product features, clarify customer journeys, and launch with confidence.</p>
+                            <h3 color="#171717">Product Strategy</h3>
+                            <p color="#716f6f">Prioritize product features, clarify customer journeys, and launch with confidence.</p>
                         </article>
                         <article className="service-card glass-panel">
-                            <h3>Experience Design</h3>
-                            <p>Deliver intuitive interfaces with accessible interactions and branded motion.</p>
+                            <h3 color="#171717">Experience Design</h3>
+                            <p color="#716f6f">Deliver intuitive interfaces with accessible interactions and branded motion.</p>
                         </article>
                         <article className="service-card glass-panel">
-                            <h3>Engineering & Launch</h3>
-                            <p>Deploy resilient storefronts with fast load times and predictable performance.</p>
+                            <h3 color="#171717">Engineering & Launch</h3>
+                            <p color="#716f6f">Deploy resilient storefronts with fast load times and predictable performance.</p>
                         </article>
                     </div>
                 </div>
@@ -132,29 +132,29 @@ const Home = () => {
             <section className="portfolio-section section-surface">
                 <div className="container">
                     <div className="section-heading">
-                        <span className="eyebrow">Portfolio</span>
-                        <h2>Recent work that showcases our design and delivery craft.</h2>
+                        <span className="eyebrow" color="#171717">Portfolio</span>
+                        <h2 color="#716f6f">Recent work that showcases our design and delivery craft.</h2>
                     </div>
                     <div className="portfolio-grid">
                         <article className="portfolio-card">
                             <img src={BannerImg} alt="Axis Commerce" />
                             <div>
-                                <h3>Axis Commerce</h3>
-                                <p>Streamlined B2B ecommerce platform with a conversion-first checkout experience.</p>
+                                <h3 color="#171717">Axis Commerce</h3>
+                                <p color="#716f6f">Streamlined B2B ecommerce platform with a conversion-first checkout experience.</p>
                             </div>
                         </article>
                         <article className="portfolio-card">
                             <img src={SecondImg} alt="Luxe Apparel" />
                             <div>
-                                <h3>Luxe Apparel</h3>
-                                <p>Developed a premium retail site with advanced product discovery and storytelling.</p>
+                                <h3 color="#171717">Luxe Apparel</h3>
+                                <p color="#716f6f">Developed a premium retail site with advanced product discovery and storytelling.</p>
                             </div>
                         </article>
                         <article className="portfolio-card">
                             <img src={ThirdImg} alt="Elemental Goods" />
                             <div>
-                                <h3>Elemental Goods</h3>
-                                <p>Created a polished digital storefront for a luxury accessories brand.</p>
+                                <h3 color="#171717">Elemental Goods</h3>
+                                <p color="#716f6f">Created a polished digital storefront for a luxury accessories brand.</p>
                             </div>
                         </article>
                     </div>
@@ -164,17 +164,17 @@ const Home = () => {
             <section className="testimonials-section">
                 <div className="container">
                     <div className="section-heading text-center">
-                        <span className="eyebrow">Client testimonials</span>
-                        <h2>Trusted by clients who expect premium delivery.</h2>
+                        <span className="eyebrow" color="#171717">Client testimonials</span>
+                        <h2 color="#716f6f">Trusted by clients who expect premium delivery.</h2>
                     </div>
                     <div className="testimonials-grid">
                         <blockquote className="testimonial-card glass-panel">
-                            <p>“AetherWorkz transformed our product launch with a modern, enterprise-ready storefront that elevated our brand and improved lead quality.”</p>
-                            <footer>— Jaime Patel, VP Marketing</footer>
+                            <p color="#040404">“AetherWorkz transformed our product launch with a modern, enterprise-ready storefront that elevated our brand and improved lead quality。”</p>
+                            <footer color="#424141">— Jaime Patel, VP Marketing</footer>
                         </blockquote>
                         <blockquote className="testimonial-card glass-panel">
-                            <p>“Their design and execution felt meticulously modern. The result was a fast, elegant site that immediately improved buyer confidence.”</p>
-                            <footer>— Nia Hughes, Head of Product</footer>
+                            <p color="#040404">“Their design and execution felt meticulously modern. The result was a fast, elegant site that immediately improved buyer confidence.”</p>
+                            <footer color="#424141">— Nia Hughes, Head of Product</footer>
                         </blockquote>
                     </div>
                 </div>
@@ -183,8 +183,8 @@ const Home = () => {
             <section className="cta-section">
                 <div className="container cta-panel glass-panel">
                     <div>
-                        <span className="eyebrow">Ready to get started?</span>
-                        <h2>Let’s build a premium digital experience for your audience.</h2>
+                        <span className="eyebrow" color="#171717">Ready to get started?</span>
+                        <h2 color="#716f6f">Let’s build a premium digital experience for your audience.</h2>
                     </div>
                     <Link to="/contact" className="btn btn-primary btn-xl">
                         Schedule a consultation
